@@ -67,3 +67,53 @@ mysql> SELECT * FROM AddressBook_System;
 |  2 | Srikanth   | Naidu    | Alampur     | Hyderabad   | Telangana | 505003  | 6301663090  | ksru044gmail.com           |
 +----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
 2 rows in set (0.00 sec)
+
+UC4:->Edit contact 
+
+ mysql> select LastName from  AddressBook_System ORDER BY LastName;
++----------+
+| LastName |
++----------+
+| Gadham   |
+| Naidu    |
++----------+
+2 rows in set (0.01 sec)
+
+mysql> select State from AddressBook_System ORDER BY State;
++-----------+
+| State     |
++-----------+
+| Telangana |
+| Telangana |
++-----------+
+2 rows in set (0.00 sec)
+
+mysql> Alter table AddressBook_System add Contact_Type varchar(100);
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from AddressBook_System;
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
+| Id | FirstName  | LastName | Address     | City        | State     | ZipCode | PhoneNumber | Email                      | Contact_Type |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
+|  1 | Manojkumar | Gadham   | Bhagatnagar | Kattarampur | Telangana | 505002  | 9110987654  | manojkumargadham@gmail.com | NULL         |
+|  2 | Srikanth   | Naidu    | Alampur     | Hyderabad   | Telangana | 505003  | 6301663090  | ksru044gmail.com           | NULL         |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> Update AddressBook_System set Contact_Type = 'Son' where id =2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> Update AddressBook_System set Contact_Type = 'Brother' where id =1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AddressBook_System;
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
+| Id | FirstName  | LastName | Address     | City        | State     | ZipCode | PhoneNumber | Email                      | Contact_Type |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
+|  1 | Manojkumar | Gadham   | Bhagatnagar | Kattarampur | Telangana | 505002  | 9110987654  | manojkumargadham@gmail.com | Brother      |
+|  2 | Srikanth   | Naidu    | Alampur     | Hyderabad   | Telangana | 505003  | 6301663090  | ksru044gmail.com           | Son          |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
+2 rows in set (0.00 sec)
