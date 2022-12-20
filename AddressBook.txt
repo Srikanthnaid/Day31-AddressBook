@@ -131,3 +131,31 @@ mysql> select * from addressbook_system;
 |  3 | HariKrishna | Naidu    | Alampur | Hyderabad | Telangana | 509152  | 9640604452  | hari2001@gmail.com | Brother      |
 +----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
 2 rows in set (0.01 sec)
+
+UC6:-> retrieve data by using city or state
+
+mysql> select * from addressbook_system where City = 'Hyderabad';
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+|  2 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Son          |
+|  3 | HariKrishna | Naidu    | Alampur | Hyderabad | Telangana | 509152  | 9640604452  | hari2001@gmail.com | Brother      |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from addressbook_system where ZipCode = '509152';
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+|  3 | HariKrishna | Naidu    | Alampur | Hyderabad | Telangana | 509152  | 9640604452  | hari2001@gmail.com | Brother      |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+1 row in set (0.00 sec)
+
+mysql> select * from addressbook_system where State = 'Telangana';
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+|  2 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Son          |
+|  3 | HariKrishna | Naidu    | Alampur | Hyderabad | Telangana | 509152  | 9640604452  | hari2001@gmail.com | Brother      |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+2 rows in set (0.00 sec)
