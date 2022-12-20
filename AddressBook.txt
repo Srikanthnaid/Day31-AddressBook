@@ -43,3 +43,27 @@ mysql> DESC AddressBook_System;
 | Email       | varchar(50) | NO   |     | NULL    |                |
 +-------------+-------------+------+-----+---------+----------------+
 9 rows in set (0.02 sec)
+
+UC3:->Insert data into tables 
+ INSERT INTO AddressBook_System
+    -> (FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email) values ('Manojkumar', 'Gadham', 'Bhagatnagar', 'Kattarampur', 'Telangana', '505002', '9110987654', 'manojkumargadham@gmail.com');
+Query OK, 1 row affected (0.02 sec)
+mysql> SELECT * FROM AddressBook_System;
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
+| Id | FirstName  | LastName | Address     | City        | State     | ZipCode | PhoneNumber | Email                      |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
+|  1 | Manojkumar | Gadham   | Bhagatnagar | Kattarampur | Telangana | 505002  | 9110987654  | manojkumargadham@gmail.com |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into AddressBook_System (FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email) values ('Srikanth', 'Naidu', 'Alampur', 'Hyderabad', 'Telangana', '505003', '6301663090', 'ksru044gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM AddressBook_System;
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
+| Id | FirstName  | LastName | Address     | City        | State     | ZipCode | PhoneNumber | Email                      |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
+|  1 | Manojkumar | Gadham   | Bhagatnagar | Kattarampur | Telangana | 505002  | 9110987654  | manojkumargadham@gmail.com |
+|  2 | Srikanth   | Naidu    | Alampur     | Hyderabad   | Telangana | 505003  | 6301663090  | ksru044gmail.com           |
++----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+
+2 rows in set (0.00 sec)
