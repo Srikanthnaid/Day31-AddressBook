@@ -117,3 +117,17 @@ mysql> select * from AddressBook_System;
 |  2 | Srikanth   | Naidu    | Alampur     | Hyderabad   | Telangana | 505003  | 6301663090  | ksru044gmail.com           | Son          |
 +----+------------+----------+-------------+-------------+-----------+---------+-------------+----------------------------+--------------+
 2 rows in set (0.00 sec)
+
+UC5:-> delete a person by using person's name
+
+mysql> delete from addressbook_system where FirstName = 'Manojkumar';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from addressbook_system;
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+|  2 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Son          |
+|  3 | HariKrishna | Naidu    | Alampur | Hyderabad | Telangana | 509152  | 9640604452  | hari2001@gmail.com | Brother      |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+2 rows in set (0.01 sec)
