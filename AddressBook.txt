@@ -126,7 +126,25 @@ UC7 :-> Ability to understand the size of address book by City and State
 +-------------+
 | COUNT(City) |
 +-------------+
-|           2 |
+|           7 |
 +-------------+
 1 row in set (0.01 sec)
+
+
+
+UC8 :-> Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+
+mysql> SELECT * FROM addressbook_system ORDER BY FirstName;
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| 15 | Harikrishna | Naidu    | Alampur | Hyderabad | Telangana | 5059152 | 9640604452  | hari2001@gmail.com | NULL         |
+|  5 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | NULL         |
+|  6 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | NULL         |
+|  8 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | NULL         |
+| 10 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | NULL         |
+| 12 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | NULL         |
+| 14 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | NULL         |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+7 rows in set (0.00 sec)
 
