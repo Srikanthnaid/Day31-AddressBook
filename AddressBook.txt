@@ -185,3 +185,15 @@ mysql> select * from addressbook_system;
 | 15 | Harikrishna | Naidu    | Alampur | Hyderabad | Telangana | 5059152 | 9640604452  | hari2001@gmail.com | Friends      |
 +----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
 7 rows in set (0.00 sec)
+
+
+UC10 :-> Ability to get number of contact persons i.e. count by type.
+
+mysql> SELECT Contact_Type, COUNT(FirstName) FROM addressbook_system GROUP BY Contact_Type;
++--------------+------------------+
+| Contact_Type | COUNT(FirstName) |
++--------------+------------------+
+| Family       |                6 |
+| Friends      |                1 |
++--------------+------------------+
+2 rows in set (0.01 sec)
