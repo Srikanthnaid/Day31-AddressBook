@@ -148,3 +148,40 @@ mysql> SELECT * FROM addressbook_system ORDER BY FirstName;
 +----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
 7 rows in set (0.00 sec)
 
+UC9 :-> identify the book by using name and type
+
+mysql>  update addressbook_system set Contact_Type = 'Family' WHERE FirstName = 'Srikanth';
+Query OK, 6 rows affected (0.03 sec)
+Rows matched: 6  Changed: 6  Warnings: 0
+
+mysql> select * from addressbook_system;
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+|  5 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+|  6 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+|  8 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 10 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 12 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 14 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 15 | Harikrishna | Naidu    | Alampur | Hyderabad | Telangana | 5059152 | 9640604452  | hari2001@gmail.com | NULL         |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+7 rows in set (0.00 sec)
+
+mysql>  update addressbook_system set Contact_Type = 'Friends' WHERE FirstName = 'Harikrishna';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook_system;
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+| Id | FirstName   | LastName | Address | City      | State     | ZipCode | PhoneNumber | Email              | Contact_Type |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+|  5 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+|  6 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+|  8 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 10 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 12 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 14 | Srikanth    | Naidu    | Alampur | Hyderabad | Telangana | 505003  | 6301663090  | ksru044gmail.com   | Family       |
+| 15 | Harikrishna | Naidu    | Alampur | Hyderabad | Telangana | 5059152 | 9640604452  | hari2001@gmail.com | Friends      |
++----+-------------+----------+---------+-----------+-----------+---------+-------------+--------------------+--------------+
+7 rows in set (0.00 sec)
